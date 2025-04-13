@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: bokdeok-bot
+    env: python
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python ddddd.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
